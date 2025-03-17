@@ -1,0 +1,23 @@
+1. Requisitos Essenciais
+📌 Módulos Principais:
+✅ Cadastro de Funcionários
+
+Nome, CPF, cargo, departamento, salário base, tipo de contrato (CLT/PJ), etc.
+✅ Cálculo de Folha de Pagamento
+
+Salário bruto, descontos (INSS, IRRF, vale-transporte), adicionais (hora extra, bônus).
+✅ Geração de Holerite
+
+Documento detalhado com salário bruto, descontos e salário líquido.
+✅ Controle de Benefícios
+
+Vale-transporte, vale-alimentação, plano de saúde.
+✅ Relatórios e Exportação
+
+Geração de relatórios mensais e exportação para PDF/Excel.
+✅ Usuários e Perfis de Acesso
+
+Diferentes níveis de acesso: funcionário, RH, administrador.
+✅ Histórico de Pagamentos
+
+Armazenamento das folhas de pagamento anteriores.
