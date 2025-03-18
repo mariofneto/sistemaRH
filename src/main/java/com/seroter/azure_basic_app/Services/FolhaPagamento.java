@@ -6,13 +6,14 @@ import java.sql.SQLOutput;
 
 public class FolhaPagamento {
     //so pra iniciar algum funcionario
-    Funcionario func = new Funcionario(1L,"Mario", 1500.00, 2, 0.0, 0.0, true);
+    Funcionario func = new Funcionario(1L,"Mario", 1500.00, 2, 10.0, 0.0, true);
 
     private Double inss = calculoINSS(func.getSalarioBruto());
-    private Double irrf = calculoIRRF();
     private Double valeTransporte = func.getValeTransporte() ? func.getSalarioBruto() * 0.06 : 0.0;
-    private Double salarioLiquido = func.getSalarioBruto() - (inss + irrf + valeTransporte);
     private Integer dependentes = func.getDependentes();
+    private Double irrf = calculoIRRF();
+    private Double horasExtras = func.getHorasExtras() * ((func.getSalarioBruto()/220) * 1.5);
+    private Double salarioLiquido = func.getSalarioBruto() - (inss + irrf + valeTransporte) + horasExtras;
 
 
 
@@ -71,12 +72,14 @@ public class FolhaPagamento {
     public void mostrarHolerite(){
         System.out.println("------- HOLERITE -------");
         System.out.println("                        ");
-        System.out.printf("SALARIO BRUTO = %.2f%n",func.getSalarioBruto());
-        System.out.printf("INSS = -%.2f%n", inss);
-        System.out.printf("IRRF = -%.2f%n", irrf);
-        System.out.printf("Vale transporte = -%.2f%n", valeTransporte);
+        System.out.printf("SALARIO BRUTO = R$%.2f%n",func.getSalarioBruto());
+        System.out.println();
+        System.out.printf("(-)INSS = R$%.2f%n", inss);
+        System.out.printf("(-)IRRF = R$%.2f%n", irrf);
+        System.out.printf("(-)Vale transporte = R$%.2f%n", valeTransporte);
+        System.out.printf("(+)Horas extras = R$%.2f%n", horasExtras);
         System.out.println("------------------------");
-        System.out.printf("SALARIO LIQUIDO = %.2f%n", salarioLiquido);
+        System.out.printf("SALARIO LIQUIDO = R$%.2f%n", salarioLiquido);
     }
 
 
