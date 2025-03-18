@@ -1,3 +1,40 @@
 - primeiro fazer em java puro, depois passar a modelagem de banco.
 - aprender a usar o docker para criar uma imagem do banco
 - criar um front basico
+
+valorSalarioBruto -> valorDescontoInss -> valorDescontoIrrf -> bonificação
+salarioFamilia (R$65,00 por filho até 14 anos ou pcd qualquer idade)
+
+1. Determinação do Salário Bruto:
+Salário Base: O ponto de partida é o salário mensal acordado em contrato.
+Proventos: Incluir todos os valores que aumentam o salário bruto, como:
+Horas extras.
+Adicionais (noturno, insalubridade, periculosidade).
+Comissões.
+Bonificações.
+Gratificações.
+Outros benefícios.
+
+2. Cálculo dos Descontos Obrigatórios:
+INSS: Calcular o valor da contribuição previdenciária, que varia de acordo com o salário.
+IRRF: Calcular o Imposto de Renda Retido na Fonte, que depende do salário e das deduções legais.
+Outros Descontos Obrigatórios: Incluir outros descontos previstos em lei, como contribuições sindicais.
+
+3. Cálculo dos Descontos Opcionais:
+Vale-Transporte: Calcular o valor do desconto de acordo com a lei e o valor do benefício.
+Vale-Alimentação/Refeição: Calcular o valor do desconto, que não pode ultrapassar 20% do salário.
+Outros Descontos: Incluir outros descontos autorizados pelo colaborador.
+
+4. Cálculo do Salário Líquido:
+Salário Líquido: Subtrair o total dos descontos do salário bruto para obter o valor final a ser pago ao colaborador.
+
+5. Outras Regras de Negócio:
+FGTS: Calcular o valor do FGTS (Fundo de Garantia por Tempo de Serviço) a ser depositado, que é um encargo da empresa.
+eSocial: Garantir que todas as informações da folha de pagamento sejam enviadas corretamente para o eSocial, sistema de registro de informações trabalhistas.
+Recisão: Aplicar as regras específicas para cálculo de rescisão de contrato de trabalho.
+Férias: Calcular o valor das férias e do terço de férias, seguindo as regras da CLT.
+13º Salário: Calcular o valor do 13º salário, que pode ser pago em duas parcelas.
+Convenções Coletivas: A folha de pagamento deve seguir as regras estabelecidas nas convenções coletivas de trabalho da categoria do colaborador.
+Atestados e Falta: Descontar os dias não trabalhados por motivo de atestado médico ou falta.
+Adiantamentos: Descontar os valores de adiantamentos pagos ao colaborador.
+Pensão Alimentícia: Descontar valores de pensão alimentícia, caso haja acordo judicial.

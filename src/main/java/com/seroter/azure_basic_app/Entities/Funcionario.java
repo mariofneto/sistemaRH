@@ -1,20 +1,22 @@
 package com.seroter.azure_basic_app.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Funcionario extends Pessoa{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class Funcionario {
     private Long id;
-    private Double salarioLiquido;
+    private String nome;
+    private Double salarioBruto;
+    private Integer dependentes;
+    private Double horasExtras;
+    private Double faltas;
+    private Boolean valeTransporte;
 
-    public Funcionario(String nome, String cpf, Double salarioLiquido) {
-        super(nome, cpf);
-        this.salarioLiquido = salarioLiquido;
+    public Funcionario(Long id, String nome, Double salarioBruto, Integer dependentes, Double horasExtras, Double faltas, Boolean valeTransporte) {
+        this.id = id;
+        this.nome = nome;
+        this.salarioBruto = salarioBruto;
+        this.dependentes = dependentes;
+        this.horasExtras = horasExtras;
+        this.faltas = faltas;
+        this.valeTransporte = valeTransporte;
     }
 
     public Long getId() {
@@ -25,11 +27,51 @@ public class Funcionario extends Pessoa{
         this.id = id;
     }
 
-    public Double getSalarioLiquido() {
-        return salarioLiquido;
+    public String getNome() {
+        return nome;
     }
 
-    public void setSalarioLiquido(Double salarioLiquido) {
-        this.salarioLiquido = salarioLiquido;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getSalarioBruto() {
+        return salarioBruto;
+    }
+
+    public void setSalarioBruto(Double salarioBruto) {
+        this.salarioBruto = salarioBruto;
+    }
+
+    public Integer getDependentes() {
+        return dependentes;
+    }
+
+    public void setDependentes(int dependentes) {
+        this.dependentes = dependentes;
+    }
+
+    public Double getHorasExtras() {
+        return horasExtras;
+    }
+
+    public void setHorasExtras(double horasExtras) {
+        this.horasExtras = horasExtras;
+    }
+
+    public Double getFaltas() {
+        return faltas;
+    }
+
+    public void setFaltas(double faltas) {
+        this.faltas = faltas;
+    }
+
+    public Boolean getValeTransporte() {
+        return valeTransporte;
+    }
+
+    public void setValeTransporte(Boolean valeTransporte) {
+        this.valeTransporte = valeTransporte;
     }
 }
